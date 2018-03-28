@@ -50,12 +50,10 @@ select {
 }
 
 button {
-  position: relative;
+  vertical-align: middle;
 
   .export {
     height: 33px;
-    position: absolute;
-    top: 9px;
   }
 }
 
