@@ -16,6 +16,6 @@ export class SearchInputComponent {
   text: string;
 
   searchText() {
-    this.search.next({ search: this.text });
+    this.search.next({ search: this.text, page: 1 });
   }
 }
