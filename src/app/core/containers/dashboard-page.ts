@@ -40,8 +40,15 @@ export class DashboardPageComponent {
   query$ = this.store.select(fromRoot.getQuery);
   metadata$ = this.store.select(fromRoot.getMetadata);
 
+  private defaultSearchQuery = {
+    page: 1,
+    sort: 'name',
+    limit: 10,
+    search: '',
+  };
+
   constructor(private store: Store<fromRoot.State>) {
-    this.search({});
+    this.search(this.defaultSearchQuery);
   }
 
   search(query) {

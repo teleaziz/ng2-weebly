@@ -11,12 +11,7 @@ const initialState: State = {
   products: null,
   loadingIndicators: null,
   metadata: null,
-  query: {
-    page: 1,
-    sort: 'name',
-    limit: 10,
-    search: '',
-  },
+  query: null,
 };
 
 export function reducer(
