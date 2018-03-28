@@ -60,7 +60,7 @@ export class LayoutEffects {
       map((action: DuplicateProduct) => new searchActions.AddProduct({
         product: {
           ...action.payload.product,
-          id: action.payload.product + (Math.ceil(Math.random() * 100)),
+          id: action.payload.product.id + Math.ceil(Math.random() * 100),
           name: `${action.payload.product.name} (copy)`
         }
       }))
