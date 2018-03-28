@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px;
+}
+
+select {
+  width: 100px;
+  padding-left: 37px;
+  margin-right: 10px;
+}
+
+.dropdown {
+  position: relative;
+
+  img {
+    position: absolute;
+    right: 12px;
+    top: 7px;
+    height: 7px;
+  }
+}

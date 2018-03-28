@@ -1,0 +1,31 @@
+<table [style.min-height]="query.limit * 50 + 'px'">
+  <thead>
+    <tr>
+      <th
+        *ngFor="let key of props"
+        [attr.id]="key"
+        (click)="sort(key)"
+        [class.sort]="key === query.sort">
+          {{key}}
+          <span *ngIf="query.sort === key"><img class="arrow" [class.up]="!query.descend" src="assets/dropdown.png"></span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products; let i = index"
+      (click)="onRowClick(product, i)"
+      (mouseleave)="onMouseleave(i)"
+      (mouseover)="onMouseover(i)">
+      <td headers="name"><img *ngIf="product.thumbnail" [src]="product.thumbnail"> {{product.name}}</td>
+      <td headers="order">{{product.order}}</td>
+      <td headers="type">{{product.type}}</td>
+      <td headers="price">{{product.price | currency:'$':'4.2-2'}}</td>
+      <td headers="inventory">
+          <span *ngIf="!hovers[i]">{{product.inventory}}</span>
+          <span *ngIf="hovers[i]">
+            <zz-product-actions (action)="onProductAction($event, product, i)"></zz-product-actions>
+          </span>
+        </td>
+    </tr>
+  </tbody>
+</table>

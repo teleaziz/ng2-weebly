@@ -1,0 +1,59 @@
+@import '~styles/variables';
+
+:host {
+  margin: 9px;
+  width: 400px;
+  height: 500px;
+  display: block;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 9px;
+}
+
+.form-control {
+  height: 30px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid lightgray;
+}
+
+.radio-control {
+  display: flex;
+  margin: 9px;
+
+  label {
+    cursor: pointer;
+  }
+
+  input {
+    display: none;
+  }
+
+  input:checked + label i{
+    color: $blue;
+    background-image: url('/assets/radio-button.svg');
+  }
+
+  label i {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background: #fff url('/assets/circle.svg') no-repeat 50%;
+    background-size: 12px;
+    position: relative;
+    top: 1px;
+    left: -2px;
+  }
+
+}
+
+.radio-group {
+  border: none;
+}
+
+.error {
+  color: $red;
+}

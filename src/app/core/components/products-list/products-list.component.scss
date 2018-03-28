@@ -1,0 +1,41 @@
+@import '~styles/variables';
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th:first-child {
+  width: 50%;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+th.sort {
+  box-shadow: $pressed-box-shadow;
+}
+
+thead {
+  background-color: $gray;
+}
+
+tr {
+  border: 1px solid $gray;
+  cursor: pointer;
+  cursor: hand;
+
+  &:hover {
+    background-color: $gray;
+    font-weight: bold;
+  }
+}
+
+.arrow {
+  height: 6px;
+}

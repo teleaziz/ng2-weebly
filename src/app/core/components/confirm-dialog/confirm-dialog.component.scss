@@ -1,0 +1,28 @@
+@import '~styles/variables';
+
+button {
+  width: 50%;
+
+  &.confirm {
+    background-color: $red;
+    color: white;  
+  }
+}
+
+:host {
+  display: flex;
+  margin: 18px;
+  width: 285px;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+}
+
+.head {
+  font-weight: bold;
+}
+
+.buttons-group {
+  display: flex;
+  justify-content: space-around;
+}

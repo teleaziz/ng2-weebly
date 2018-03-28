@@ -1,0 +1,5 @@
+<div class="modal-container" [class.active]="!!componentInstance">
+  <ng-template zzModalContainer></ng-template>
+</div>
+<div class="backdrop" (click)="backdropClick.next(null)" [hidden]="!componentInstance">
+</div>

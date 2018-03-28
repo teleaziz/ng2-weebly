@@ -1,0 +1,7 @@
+<div class="actions">
+  <button 
+    *ngFor="let action of actions"
+    (click)="pick(action, $event)">
+    <img [src]="action.svg">
+  </button>
+</div>

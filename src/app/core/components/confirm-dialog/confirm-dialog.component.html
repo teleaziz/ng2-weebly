@@ -1,0 +1,16 @@
+<div class="confirm-dialog">
+  <div class="head">
+    Are you sure?
+  </div>
+  <p class="message">
+    {{params.message}}
+  </p>
+  <div class="buttons-group">
+    <button class="cancel" (click)="confirm(false)">
+      Cancel
+    </button>
+    <button class="confirm" (click)="confirm(true)">
+      {{ params.cta }}
+    </button>  
+  </div>
+</div>
