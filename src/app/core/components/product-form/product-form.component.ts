@@ -46,7 +46,7 @@ export class ProductFormComponent {
   }
 
   save() {
-    if (this.productForm.invalid) {
+    if (this.productForm.invalid || !this.productForm.dirty) {
       return;
     }
 
