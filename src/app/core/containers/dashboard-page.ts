@@ -19,7 +19,7 @@ import * as search from '../actions/search';
       <zz-search-input [query]="query$ | async" (search)="search($event)"></zz-search-input>
       <div>
         <button class="action" (click)="addProduct()">Add Product</button>
-        <button><img class="export" src="assets/export.png"></button>
+        <button (click)="export()"><img class="export" src="assets/export.png"></button>
       </div>
     </div>
     <zz-products-list
