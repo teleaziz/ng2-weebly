@@ -67,4 +67,8 @@ export class DashboardPageComponent {
   onProductAction(action) {
     this.store.dispatch(action);
   }
+
+  addProduct() {
+    this.store.dispatch(new layout.AddProduct);
+  }
 }
